@@ -35,6 +35,9 @@ Plugin 'lambdatoast/elm.vim'
 " grep.vim for grepping within vim
 Bundle 'grep.vim'
 
+" Ack!
+Plugin 'mileszs/ack.vim'
+
 " TagList, for getting a list of all tags in file
 Bundle 'taglist.vim'
 
@@ -70,12 +73,7 @@ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 " Ditto for C
 autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4
 
-" Line numbers are relative in normal mode,
-" absolute when focus is lost or insert mode is entered
-":au FocusLost * :set number
-":au FocusGained * :set relativenumber
-"autocmd InsertEnter * silent! :set norelativenumber number
-"autocmd InsertLeave,BufNewFile,VimEnter,WinEnter * silent! :set nonumber relativenumber
+" Line numbers are relative, except current line
 set number relativenumber
 
 " create undo files so undo still works after close/reopen
@@ -96,17 +94,6 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ \ %P    "percent through file
 
-" Define function to toggle syntax highlighting
-function! ToggleSyntax()
-	if exists("g:syntax_on")
-		syntax off
-	else
-		syntax enable
-	endif
-endfunction
-
-nmap <silent> :sy :call ToggleSyntax()<CR>
-
 " Misc key remappings
 nnoremap ; :
 nnoremap , ;
@@ -122,15 +109,12 @@ command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* NoWrap set nowrap nolinebreak
 " more line wrap settings
 set colorcolumn=80
-" Highlight the background for lines with >80 chars (annoying, have turned off
-" for now)
-" highlight Overlength ctermbg=darkred ctermfg=white guibg=#592929
-" match Overlength /\%>80v.\+/
 
-" formatting options
+" formatting options.
+" j attempts to remove comment chars when joining lines
 set formatoptions=tcqj
 
-" map keys for navigating in soft line-wrapped mode
+" map keys for sensible navigation in soft line-wrapped mode
 vmap <D-j> gj
 vmap <D-k> gk
 vmap <D-4> g$
@@ -171,7 +155,7 @@ set scrolloff=2
 " default encoding is UTF-8
 set encoding=utf-8
 
-" set wildchar completion mode for command-line completion
+" set wildchar completion mode for better command-line completion
 set wildmenu
 set wildmode=longest:full
 
@@ -188,10 +172,10 @@ set showcmd
 " if focus lost, save all files
 au FocusLost * :wa
 
-" misc <leader>key commands
+" MISC <LEADER>KEY COMMANDS
 
-" grep shortcut
-nnoremap <leader>g :Grep 
+" ack shortcut
+nnoremap <leader>a :Ack
 " select whatever text was just pasted
 nnoremap <leader>v V`]
 " open vimrc for quick editing
