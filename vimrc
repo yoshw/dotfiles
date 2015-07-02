@@ -180,6 +180,10 @@ au FocusLost * :wa
 nnoremap <leader>a :Ack! 
 " select whatever text was just pasted
 nnoremap <leader>v V`]
+" run a Syntastic check
+nnoremap <leader>s :SyntasticCheck<cr>
+" get rid of Syntastic error list
+nnoremap <leader>sr :SyntasticReset<cr>
 " open vimrc for quick editing
 nnoremap <leader>ev <C-w>v<C-w>l:e $MYVIMRC<cr>
 nnoremap <leader>eg <C-w>v<C-w>l:e $MYGVIMRC<cr>
