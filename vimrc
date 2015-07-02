@@ -130,8 +130,8 @@ nmap <D-0> g^
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><leader> :noh<cr>
-vnoremap <leader><leader> :noh<cr>
+nnoremap <leader><space> :noh<cr>
+vnoremap <leader><space> :noh<cr>
 " get normal (Perl/Python) regex behaviour in searches
 nnoremap / /\v
 vnoremap / /\v
@@ -163,8 +163,8 @@ set wildmode=longest:full
 set cursorline
 
 " mapping the <leader> key to Space.
-nnoremap <space> <nop>
-vnoremap <space> <nop>
+" nnoremap <space> <nop>
+" vnoremap <space> <nop>
 let mapleader="\<space>"
 " show commands as we enter them
 set showcmd
@@ -175,7 +175,7 @@ au FocusLost * :wa
 " MISC <LEADER>KEY COMMANDS
 
 " ack shortcut
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
 " select whatever text was just pasted
 nnoremap <leader>v V`]
 " open vimrc for quick editing
