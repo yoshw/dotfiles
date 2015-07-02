@@ -130,8 +130,8 @@ nmap <D-0> g^
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
-vnoremap <leader><space> :noh<cr>
+nnoremap <leader>h :noh<cr>
+vnoremap <leader>h :noh<cr>
 " get normal (Perl/Python) regex behaviour in searches
 nnoremap / /\v
 vnoremap / /\v
