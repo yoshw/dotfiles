@@ -19,6 +19,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint','flake8']
 let g:syntastic_auto_loc_list = 1
+" I am sick of automatic Syntastic!
+let g:syntastic_mode_map = {"mode": "passive"}
 
 " NERD tree, for easier file browsing
 Plugin 'scrooloose/nerdtree'
