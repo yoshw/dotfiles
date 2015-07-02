@@ -175,7 +175,7 @@ au FocusLost * :wa
 " MISC <LEADER>KEY COMMANDS
 
 " ack shortcut
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack! 
 " select whatever text was just pasted
 nnoremap <leader>v V`]
 " open vimrc for quick editing
