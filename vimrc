@@ -128,12 +128,17 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
+" mapping the <leader> key to Space.
+nnoremap <space> <nop>
+vnoremap <space> <nop>
+let mapleader="\<space>"
+
 " highlight searches by default; <leader><space> to clear out highlighting
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader>h :noh<cr>
-vnoremap <leader>h :noh<cr>
+nnoremap <leader><leader> :noh<cr>
+vnoremap <leader><leader> :noh<cr>
 " get normal (Perl/Python) regex behaviour in searches
 nnoremap / /\v
 vnoremap / /\v
@@ -164,10 +169,6 @@ set wildmode=longest:full
 " highlight line with cursor on it
 set cursorline
 
-" mapping the <leader> key to Space.
-" nnoremap <space> <nop>
-" vnoremap <space> <nop>
-let mapleader="\<space>"
 " show commands as we enter them
 set showcmd
 
