@@ -182,7 +182,7 @@ nnoremap <leader>a :Ack!
 " select whatever text was just pasted
 nnoremap <leader>v V`]
 " run a Syntastic check
-nnoremap <leader>s :SyntasticCheck<cr>
+nnoremap <leader>ss :SyntasticCheck<cr>
 " get rid of Syntastic error list
 nnoremap <leader>sr :SyntasticReset<cr>
 " open vimrc for quick editing
