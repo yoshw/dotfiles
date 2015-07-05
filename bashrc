@@ -79,3 +79,6 @@ export PATH="/Users/Yosh/anaconda/bin:$PATH"
 
 # NetHack!
 export PATH="/usr/games/bin:$PATH"
+
+# set Git editor
+export GIT_EDITOR=vim
