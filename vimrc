@@ -188,3 +188,8 @@ nnoremap <leader>sr :SyntasticReset<cr>
 " open vimrc for quick editing
 nnoremap <leader>ev <C-w>v<C-w>l:e $MYVIMRC<cr>
 nnoremap <leader>eg <C-w>v<C-w>l:e $MYGVIMRC<cr>
+" make window navigation a bit easier
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
