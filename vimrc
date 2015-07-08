@@ -27,6 +27,7 @@ Plugin 'scrooloose/nerdtree'
 
 " NERD commenter, for easier commenting
 Plugin 'scrooloose/nerdcommenter'
+let g:NERDSpaceDelims = 1
 
 " Command-T, for file switching
 Plugin 'git://git.wincent.com/command-t.git'
