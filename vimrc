@@ -50,6 +50,9 @@ Plugin 'tpope/vim-fugitive'
 " Surround.vim, for manipulating 'surroundings'
 Plugin 'tpope/vim-surround'
 
+" Repeat.vim, for using the . command on plugin maps
+Plugin 'tpope/vim-repeat'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
