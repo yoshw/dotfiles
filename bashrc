@@ -82,3 +82,5 @@ export PATH="/usr/games/bin:$PATH"
 
 # set Git editor
 export GIT_EDITOR=vim
+
+echo "Sourced bashrc"
