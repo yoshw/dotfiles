@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Yosh/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -105,4 +105,7 @@ alias cdurop="cd ~/Documents/Work/2015_UROP"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+test -e ~/.zshrc-local && source ~/.zshrc-local
+
 echo "Sourced .zshrc"
