@@ -18,6 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 " Syntastic, for on-the-fly error checking
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint','flake8']
+let g:syntastic_cpp_compiler = 'g++-4.9'
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_auto_loc_list = 1
 " I am sick of automatic Syntastic!
 let g:syntastic_mode_map = {"mode": "passive"}
@@ -79,8 +81,9 @@ colorscheme molokai
 
 " Make all indentation soft tabs when editing Python files
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
-" Ditto for C
+" Ditto for C, C++
 autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype cpp setlocal expandtab tabstop=4 shiftwidth=4
 
 " Line numbers are relative, except current line
 set number relativenumber
