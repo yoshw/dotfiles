@@ -52,15 +52,6 @@ ENABLE_CORRECTION="true"
 plugins=(git brew python osx fasd zsh-syntax-highlighting)
 eval "$(fasd --init auto)"
 
-# User configuration
-
-export PATH="/usr/games/bin:/Users/Yosh/anaconda/bin:/usr/local/mysql/bin:~/Library/Haskell/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/2.6/bin:/Library/Frameworks/Python.framework/Versions/Current/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Setting PYTHONPATH for my custom modules
-export PYTHONPATH=$PYTHONPATH:"/Users/Yosh/code/pymodules"
-export PYTHONPATH=$PYTHONPATH:"/Users/Yosh/Documents/Work/Tutoring/2014_COMP10001/projects/proj1"
-
 source $ZSH/oh-my-zsh.sh
 
 # Environment variables for Subversion
@@ -88,19 +79,6 @@ export GIT_EDITOR=vim
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias touch-c-boiler="cp ~/code/resources/c/boilerplate.c ."
-# Launch apps
-alias chrome="open /Applications/Google\ Chrome.app"
-alias itunes="open /Applications/iTunes.app"
-alias emmacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-alias octave="exec '/Applications/Octave.app/Contents/Resources/bin/octave'"
-alias vim="/usr/local/Cellar/vim/7.4.253/bin/vim"
-
-# Quick switching to commonly-used directories
-alias cdapps="cd /Applications"
-alias cdstudy="cd ~/Documents/study/bsc/2015/sem1"
-alias cdcomp10001="cd ~/Documents/Work/Tutoring/2015_COMP10001"
-alias cdurop="cd ~/Documents/Work/2015_UROP"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
