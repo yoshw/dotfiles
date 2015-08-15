@@ -18,7 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 " Syntastic, for on-the-fly error checking
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint','flake8']
-let g:syntastic_cpp_compiler = 'g++-4.9'
+let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_auto_loc_list = 1
 " I am sick of automatic Syntastic!
