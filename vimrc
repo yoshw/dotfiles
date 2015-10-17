@@ -84,6 +84,13 @@ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 " Ditto for C, C++
 autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype cpp setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype rnoweb setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype tex setlocal expandtab tabstop=4 shiftwidth=4
+
+autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
+
+" turn on spell checking for Markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Line numbers are relative, except current line
 set number relativenumber
