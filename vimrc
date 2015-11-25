@@ -92,15 +92,17 @@ let g:solarized_termtrans = 1
 " colorscheme jellybeans
 colorscheme hybrid
 
-" Make all indentation soft tabs when editing Python files
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
-" Ditto for C, C++
-autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype cpp setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype rnoweb setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype tex setlocal expandtab tabstop=4 shiftwidth=4
+" Indentation is width-4 soft tabs by default
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
+" shell scripts: width-2 indents
 autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
+
+" makefiles: hard tabs
+autocmd Filetype make setlocal noexpandtab
+
 
 " turn on spell checking for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
