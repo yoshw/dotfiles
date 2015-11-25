@@ -44,7 +44,8 @@ Bundle 'grep.vim'
 Plugin 'mileszs/ack.vim'
 
 " TagList, for getting a list of all tags in file
-Bundle 'taglist.vim'
+" not currently working ...
+" Bundle 'taglist.vim'
 
 " Fugitive, for Git integration
 Plugin 'tpope/vim-fugitive'
@@ -54,6 +55,9 @@ Plugin 'tpope/vim-surround'
 
 " Repeat.vim, for using the . command on plugin maps
 Plugin 'tpope/vim-repeat'
+
+" get Groovy syntax highlighting in .gradle files
+Plugin 'tfnico/vim-gradle'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
