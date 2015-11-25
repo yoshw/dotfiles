@@ -56,6 +56,13 @@ Plugin 'tpope/vim-surround'
 " Repeat.vim, for using the . command on plugin maps
 Plugin 'tpope/vim-repeat'
 
+" Jellybeans colour scheme
+Plugin 'nanotech/jellybeans.vim'
+
+" w0ng's hybrid colour scheme
+Plugin 'w0ng/vim-hybrid'
+let g:hybrid_use_Xresources = 1
+
 " get Groovy syntax highlighting in .gradle files
 Plugin 'tfnico/vim-gradle'
 
@@ -81,7 +88,9 @@ set background=dark
 let g:solarized_termcolors=16
 let g:solarized_termtrans = 1
 " colorscheme solarized
-colorscheme molokai
+" colorscheme molokai
+" colorscheme jellybeans
+colorscheme hybrid
 
 " Make all indentation soft tabs when editing Python files
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
