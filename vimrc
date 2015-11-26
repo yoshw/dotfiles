@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 " Syntastic, for on-the-fly error checking
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint','flake8']
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_auto_loc_list = 1
