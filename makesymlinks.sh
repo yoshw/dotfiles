@@ -35,6 +35,10 @@ for file in $files; do
       # if this is the first time we're backing this file up,
       # copy it as is to the dotfiles directory
       if [ ! -f $dir/$file ]; then
+        if [ ! -f ~/.$file ]; then
+          echo "WARNING: file $file does not already exist. Maybe create it?"
+          continue
+        fi
         cp ~/.$file $dir/$file
         echo "Copied .$file to $dir"
       fi
