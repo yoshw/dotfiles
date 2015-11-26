@@ -1,0 +1,2 @@
+#!/bin/sh
+feh  --bg-scale '/home/yosh/pictures/857400-mountain-range.jpg' 
