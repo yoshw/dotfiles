@@ -27,17 +27,24 @@ echo -n "Changing to the $dir directory ..."
 cd $dir
 echo "done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory,
-# then create symlinks from the homedir to any files in
-# the $dir directory specified in $files
+symlinked=""
+echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
     # first test whether a symlink already exists
     if [ ! -L ~/.$file ]; then
+      # if this is the first time we're backing this file up,
+      # copy it as is to the dotfiles directory
+      if [ ! -f $dir/$file ]; then
+        cp ~/.$file $dir/$file
+        echo "Copied .$file to $dir"
+      fi
       mv ~/.$file $olddir
       echo "Moved ~/.$file to $olddir"
-      echo "Symlinking $file in home dir"
       ln -s $dir/$file ~/.$file
-      echo "Done"
+      echo "Created home dir symlink to $file"
+      symlinked="$symlinked $file"
     fi
 done
+
+echo
+echo "Dotfiles newly linked:$symlinked"
