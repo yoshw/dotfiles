@@ -38,9 +38,10 @@ nautilus --no-desktop -n &
 mpd &
 
 # other settings
-xcompmgr -c & # compositing
+xcompmgr -c &                     # compositing
 xsetroot -cursor_name left_ptr
 xbindkeys
+setxkbmap -option caps:swapescape # swap Capslock and Esc
 
 # start xmonad
 exec /usr/bin/xmonad
