@@ -36,6 +36,7 @@ sh $HOME/.fehbg &
 # start some programs
 nautilus --no-desktop -n &
 mpd &
+xscreensaver &
 
 # other settings
 xcompmgr -c &                     # compositing
