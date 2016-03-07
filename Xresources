@@ -54,3 +54,6 @@ URxvt.fading: 30
 ! depth is for transparency. Font is for font.
 URxvt.depth: 32
 URxvt.font: xft:inconsolata:size=11
+
+URxvt.perl-ext-common: ...,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
