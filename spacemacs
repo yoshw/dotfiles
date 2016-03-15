@@ -245,6 +245,8 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (define-key evil-normal-state-mode (kbd ";") 'evil-ex)
+  (define-key evil-normal-state-mode (kbd ":") 'evil-repeat-find-char)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
