@@ -58,6 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables for Subversion
 export SVN_EDITOR=vim
 export GIT_EDITOR=vim
+export VISUAL=vim
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
