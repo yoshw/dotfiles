@@ -38,6 +38,7 @@ nautilus --no-desktop -n &
 mpd &
 xscreensaver &
 redshift &
+ibus-daemon -drx
 
 # other settings
 xcompmgr -c &                     # compositing
