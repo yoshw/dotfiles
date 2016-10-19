@@ -1,0 +1,14 @@
+# source PATH variable set in zpath
+# see http://www.zsh.org/mla/users/2003/msg00600.html
+if [[ $SHLVL == 1 && ! -o LOGIN ]]; then
+    source ~/.zpath
+fi
+
+test-microphone() {
+    arecord -vvv -f dat /dev/null
+}
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+source ~/.autoenv/activate.sh
