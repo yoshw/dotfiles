@@ -23,7 +23,9 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-complete-with-key-sequence "jk")
+     company-mode
      ;; better-defaults
      emacs-lisp
      ;; git
@@ -33,13 +35,15 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
+     syntax-checking
      ;; version-control
      latex
      ess
      csv
      csharp
      haskell
+     javascript
+     python
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -243,6 +247,7 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  (add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
   )
 
 (defun dotspacemacs/user-config ()
