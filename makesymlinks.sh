@@ -41,9 +41,9 @@ for file in $files; do
         fi
         cp ~/.$file $dir/$file
         echo "Copied .$file to $dir"
+        mv ~/.$file $olddir
+        echo "Moved ~/.$file to $olddir"
       fi
-      mv ~/.$file $olddir
-      echo "Moved ~/.$file to $olddir"
       ln -s $dir/$file ~/.$file
       echo "Created home dir symlink to $file"
       symlinked="$symlinked $file"
