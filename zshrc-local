@@ -11,4 +11,6 @@ test-microphone() {
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+alias npm-exec='PATH=$(npm bin):$PATH'
+
 source ~/.autoenv/activate.sh
