@@ -86,7 +86,7 @@ export VISUAL=vim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # limit the scope of rm
-alias rm='noglob timeout 3 rm -Iv --one-file-system'
+alias rm='noglob gtimeout 3 rm -v'
 
 # fix zsh annoying history behavior (from github.com/graysky2)
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
