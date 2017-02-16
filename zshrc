@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sprockets"
+ZSH_THEME="kphoen"
 
 unsetopt autopushd
 # Uncomment the following line to use case-sensitive completion.
@@ -50,7 +50,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew python osx fasd zsh-syntax-highlighting)
+plugins=(git brew python fasd osx zsh-syntax-highlighting)
 eval "$(fasd --init auto)"
 
 source $ZSH/oh-my-zsh.sh
@@ -58,6 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables for Subversion
 export SVN_EDITOR=vim
 export GIT_EDITOR=vim
+export VISUAL=vim
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,7 +84,14 @@ export GIT_EDITOR=vim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+# limit the scope of rm
+alias rm='noglob timeout 3 rm -Iv --one-file-system'
+
+# fix zsh annoying history behavior (from github.com/graysky2)
+h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
+
+#####
 
 test -e ~/.zshrc-local && source ~/.zshrc-local
 
