@@ -1,22 +1,11 @@
-" Enable pathogen
-execute pathogen#infect()
-filetype plugin indent on
-
-" VUNDLE PLUGIN MANAGER
+" PLUGINS
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin()
 
 " Syntastic, for on-the-fly error checking
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 let g:syntastic_python_checkers = ['pylint','flake8']
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_cpp_compiler = 'g++'
@@ -26,63 +15,54 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = {"mode": "passive"}
 
 " NERD tree, for easier file browsing
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " NERD commenter, for easier commenting
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 
 " Command-T, for file switching
-Plugin 'git://git.wincent.com/command-t.git'
+Plug 'git://git.wincent.com/command-t.git'
 
 " elm.vim, for Elm syntax highlighting
-Plugin 'lambdatoast/elm.vim'
+Plug 'lambdatoast/elm.vim'
 
 " grep.vim for grepping within vim
-Bundle 'grep.vim'
+Plug 'grep.vim'
 
 " Ack!
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " TagList, for getting a list of all tags in file
 " not currently working ...
 " Bundle 'taglist.vim'
 
 " Fugitive, for Git integration
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Surround.vim, for manipulating 'surroundings'
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Repeat.vim, for using the . command on plugin maps
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 " Jellybeans colour scheme
-Plugin 'nanotech/jellybeans.vim'
+Plug 'nanotech/jellybeans.vim'
 
 " w0ng's hybrid colour scheme
-Plugin 'w0ng/vim-hybrid'
+Plug 'w0ng/vim-hybrid'
 let g:hybrid_use_Xresources = 1
 
 " get Groovy syntax highlighting in .gradle files
-Plugin 'tfnico/vim-gradle'
+Plug 'tfnico/vim-gradle'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
-"Turn on syntax highlighting
+" END PLUGINS
+
+
+" COLORS (and syntax highlighting)
 syntax on
 set background=dark
 "solarized colorscheme
@@ -93,26 +73,19 @@ let g:solarized_termtrans = 1
 " colorscheme jellybeans
 colorscheme hybrid
 
-" Indentation is width-4 soft tabs by default
+" INDENTATION
 set expandtab
 set tabstop=4
 set shiftwidth=4
 
-" shell scripts: width-2 indents
-autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2
-
-" makefiles: hard tabs
-autocmd Filetype make setlocal noexpandtab
-
+autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2 " shell scripts: width-2 indents
+autocmd Filetype make setlocal noexpandtab                    " makefiles: hard tabs
 
 " turn on spell checking for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Line numbers are relative, except current line
 set number relativenumber
-
-" create undo files so undo still works after close/reopen
-set undofile
 
 " Customise status line
 set laststatus=2
@@ -147,7 +120,8 @@ set colorcolumn=80
 
 " formatting options.
 " j attempts to remove comment chars when joining lines
-set formatoptions=tcqj
+" set formatoptions=tcqj
+set formatoptions=tcq
 
 " map keys for sensible navigation in soft line-wrapped mode
 vmap <D-j> gj
