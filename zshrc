@@ -51,7 +51,9 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git brew python fasd osx zsh-syntax-highlighting)
+
 eval "$(fasd --init auto)"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZSH/oh-my-zsh.sh
 
