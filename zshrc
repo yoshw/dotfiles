@@ -85,6 +85,8 @@ export VISUAL=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ll="ls -FlAG"
+
 # limit the scope of rm
 alias rm='noglob timeout 3 rm -Iv --one-file-system'
 
