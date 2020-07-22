@@ -3,3 +3,5 @@ if [ -f ~/.bashrc ]; then
 fi
 
 echo "Sourced bash_profile"
+
+export PATH="$HOME/.cargo/bin:$PATH"

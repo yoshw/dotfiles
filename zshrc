@@ -98,3 +98,5 @@ h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
 test -e ~/.zshrc-local && source ~/.zshrc-local
 
 echo "Sourced .zshrc"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

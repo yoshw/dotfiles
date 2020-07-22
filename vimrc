@@ -27,9 +27,6 @@ Plug 'git://git.wincent.com/command-t.git'
 " elm.vim, for Elm syntax highlighting
 Plug 'lambdatoast/elm.vim'
 
-" grep.vim for grepping within vim
-Plug 'grep.vim'
-
 " Ack!
 Plug 'mileszs/ack.vim'
 
@@ -78,8 +75,9 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2 " shell scripts: width-2 indents
-autocmd Filetype make setlocal noexpandtab                    " makefiles: hard tabs
+autocmd Filetype sh setlocal expandtab tabstop=2 shiftwidth=2   " shell scripts: width-2 indents
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2 " yaml: width-2 indents
+autocmd Filetype make setlocal noexpandtab                      " makefiles: hard tabs
 
 " turn on spell checking for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
@@ -117,6 +115,7 @@ command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* NoWrap set nowrap nolinebreak
 " more line wrap settings
 set colorcolumn=80
+set colorcolumn+=120
 
 " formatting options.
 " j attempts to remove comment chars when joining lines
@@ -186,6 +185,10 @@ au FocusLost * :wa
 
 " ack shortcut
 nnoremap <leader>a :Ack! 
+" set paste
+nnoremap <leader>p :set paste<cr>
+" turn off line numbers
+nnoremap <leader>n :set nonumber norelativenumber<cr>
 " select whatever text was just pasted
 nnoremap <leader>v V`]
 " run a Syntastic check
