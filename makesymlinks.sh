@@ -11,7 +11,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
 files="bashrc zshrc vimrc gvimrc bash_profile spacemacs zshrc-local zpath zshenv"
-files="$files xbindkeysrc xinitrc Xresources" # linux specific
+# files="$files xbindkeysrc xinitrc Xresources" # arch linux specific
 
 ##########
 
