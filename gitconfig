@@ -10,5 +10,3 @@
     discard = checkout --
     ll = log --oneline
     diss = diff --staged
-[url "git@github.com:"]
-    insteadOf = https://github.com/
