@@ -1,86 +1,37 @@
-" Enable pathogen
-execute pathogen#infect()
-filetype plugin indent on
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" VUNDLE PLUGIN MANAGER
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Syntastic, for on-the-fly error checking
-Plugin 'scrooloose/syntastic'
-let g:syntastic_python_checkers = ['pylint','flake8']
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
-let g:syntastic_auto_loc_list = 1
-" I am sick of automatic Syntastic!
-let g:syntastic_mode_map = {"mode": "passive"}
+" Make sure you use single quotes
 
 " NERD tree, for easier file browsing
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " NERD commenter, for easier commenting
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims = 1
 
-" Command-T, for file switching
-Plugin 'git://git.wincent.com/command-t.git'
-
-" elm.vim, for Elm syntax highlighting
-Plugin 'lambdatoast/elm.vim'
-
-" grep.vim for grepping within vim
-Bundle 'grep.vim'
-
-" Ack!
-Plugin 'mileszs/ack.vim'
-
-" TagList, for getting a list of all tags in file
-" not currently working ...
-" Bundle 'taglist.vim'
-
-" Fugitive, for Git integration
-Plugin 'tpope/vim-fugitive'
-
 " Surround.vim, for manipulating 'surroundings'
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
-" Repeat.vim, for using the . command on plugin maps
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive' " Git status
 
 " Jellybeans colour scheme
-Plugin 'nanotech/jellybeans.vim'
+Plug 'nanotech/jellybeans.vim'
 
 " w0ng's hybrid colour scheme
-Plugin 'w0ng/vim-hybrid'
+Plug 'w0ng/vim-hybrid'
 let g:hybrid_use_Xresources = 1
 
 " get Groovy syntax highlighting in .gradle files
-Plugin 'tfnico/vim-gradle'
+Plug 'tfnico/vim-gradle'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()
 
 "Turn on syntax highlighting
 syntax on

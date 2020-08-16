@@ -50,8 +50,9 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew python fasd archlinux zsh-syntax-highlighting)
-eval "$(fasd --init auto)"
+# plugins=(git brew python fasd archlinux zsh-syntax-highlighting)
+#eval "$(fasd --init auto)"
+plugins=(git brew python archlinux zsh-syntax-highlighting colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,16 +92,16 @@ alias ll="ls -FlAG"
 alias rm='noglob timeout 3 rm -Iv --one-file-system'
 
 # Enable coloured man pages
-man() {
-    env LESS_TERMCAP_mb=$'\E[01;31m' \
-    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
-    LESS_TERMCAP_me=$'\E[0m' \
-    LESS_TERMCAP_se=$'\E[0m' \
-    LESS_TERMCAP_so=$'\E[38;5;246m' \
-    LESS_TERMCAP_ue=$'\E[0m' \
-    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
-    man "$@"
-}
+# man() {
+#     env LESS_TERMCAP_mb=$'\E[01;31m' \
+#     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+#     LESS_TERMCAP_me=$'\E[0m' \
+#     LESS_TERMCAP_se=$'\E[0m' \
+#     LESS_TERMCAP_so=$'\E[38;5;246m' \
+#     LESS_TERMCAP_ue=$'\E[0m' \
+#     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+#     man "$@"
+# }
 
 # fix zsh annoying history behavior (from github.com/graysky2)
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }

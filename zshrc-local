@@ -13,4 +13,4 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias npm-exec='PATH=$(npm bin):$PATH'
 
-source ~/.autoenv/activate.sh
+# source ~/.autoenv/activate.sh
