@@ -10,3 +10,5 @@
     discard = checkout --
     ll = log --oneline
     diss = diff --staged
+[credential]
+    helper = gnome-keyring
